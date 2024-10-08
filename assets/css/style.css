@@ -40,11 +40,15 @@ nav {
     margin-right: 3rem;
 }
 
-nav h2 {
+nav h2 a{
     font-family: 'allura';
     color: white;
     font-size: 3rem;
     font-weight: 500;
+}
+
+nav h2 a:hover {
+    color: rgb(144, 112, 8);
 }
 
 .liste1 {
@@ -69,10 +73,8 @@ nav h2 {
 
 header {
     background-image: url(../img/bg-slider-06.jpg);
-    background-size: cover;
     background-position: center;
     height: 37rem;
-    object-fit: cover;
     padding-top: 2rem;
 }
 
@@ -82,7 +84,7 @@ header {
     align-items: center;
     text-align: center;
     color: rgb(144, 112, 8);
-    margin-top: 6rem;
+    margin-top: 4rem;
     font-family: 'allura';
     font-size: 3rem;
     font-weight: 500;
@@ -173,7 +175,7 @@ h1 {
 }
 
 .photo img {
-    width: 40rem;
+    width: 100%;
     height: 36rem;
     object-fit: cover;
 }
@@ -185,6 +187,7 @@ h1 {
     background-color: rgb(19, 18, 18);
     flex-direction: column;
     align-items: center;
+    padding-bottom: 5rem;
 }
 
 .intersec_plats h2 {
@@ -213,13 +216,22 @@ h1 {
     align-items: center;
     justify-content: center;
     color: white;
-    margin-bottom: 2rem;
     text-decoration: underline 1px;
+    margin-bottom: 4rem;
 }
 
 .intersec_plats ul li {
     display: flex;
     margin-left: 3rem;
+}
+
+.intersec_plats ul li a {
+    color: white;
+}
+
+.intersec_plats ul li a:hover {
+    color: rgb(144, 112, 8);
+    text-decoration: underline rgb(144, 112, 8) 1px;
 }
 
             /* Plats */
@@ -231,9 +243,12 @@ h1 {
 .plat {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 470px;
     background-color: white;
     padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
 
 }
 
@@ -243,6 +258,8 @@ h1 {
 
 .desc_plat h4 {
     font-weight: 500;
+    font-family: 'poppins_regular';
+    width: 15rem;
 }
 
 .desc_plat p {
@@ -264,9 +281,26 @@ h1 {
 .all_plats {
     display: flex;
     justify-content: center;
-    background-color:rgb(19, 18, 18);
-    background-image: url(../img/bg-menu-01.jpg);
     padding-bottom: 4rem;
+    position: absolute;
+    align-items: center;
+    z-index: 2;
+    padding-bottom: 5rem;
+    margin-top: -5rem;
+
+}
+
+.background {
+    background-image: url(../img/bg-menu-01.jpg);
+    height: 90vh;
+    width: 100%;
+}
+
+.tout {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(19, 18, 18);
+    position: relative;
 }
 
 .plats {
@@ -288,7 +322,7 @@ h1 {
 }
 
 .time {
-    height: 430px;
+    height: 470px;
     width: 280px;
     background-color: rgb(7, 6, 6);
     margin-top: 3rem;
@@ -301,6 +335,23 @@ h1 {
     font-weight: 500;
 }
 
+.dashed {
+    border: dashed grey 1px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.dashed img {
+    height: 30px;
+    width: 30px;
+    margin-left: 5rem;
+}
+
 .sous_titre {
     color: rgb(144, 112, 8);
     font-family: 'Times New Roman', Times, serif;
@@ -311,7 +362,15 @@ h2 {
    font-family: 'allura';
    font-size: 40px;
    text-align: center;
-   margin-top: 2rem;
+   font-weight: 500;
+}
+
+.booking h2 {
+    margin-top: 2rem;
+}
+
+.chef h2 {
+    margin-top: 2rem;
 }
 
 .open {
@@ -328,7 +387,7 @@ h2 {
 }
 .booking {
     background: white;
-    height: 430px;
+    height: 470px;
     width: 600px;
     margin-top: 3rem;
 }
@@ -384,6 +443,7 @@ h2 {
     font-family: 'poppins_regular';
     font-size: medium;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .booking button:hover {
@@ -418,37 +478,632 @@ h2 {
     padding-bottom: 3rem;
 }
 
+.inter2 h2 {
+    margin-top: 2rem;
+}
+
+.inter2 img {
+    margin-top: 2rem;
+}
+
             /* Gallery */
 
 .gallery {
     background-color: rgb(19, 18, 18);
-
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: center;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    max-width: 600px;
-    margin-left: 6rem;
-    margin-right: 6rem;
 }
 
 .grid img {
-    width: 24rem;
-    height: auto;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+            /* Intersec Gallery */
+
+.intersec_gallery {
+    background-color: rgb(19, 18, 18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intersec_gallery a {
+    border: solid white 1px;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    padding-left:20px;
+    padding-right: 20px;
+    font-family: 'poppins_regular';
+    font-size: medium;
+    letter-spacing: 2px;
+}
+
+.intersec_gallery h3 {
+    font-weight: 900;
+    font-size: 25px;
+    font-family: 'poppins_regular';
+    color: white;
+}
+
+.intersec_gallery h2 {
+    font-weight: 500;
+    margin-top: 6rem;
+}
+
+.intersec_gallery img {
+    margin-top: 2rem;
+}
+
+.intersec_gallery a:hover {
+    color: rgb(144, 112, 8);
+    border: solid rgb(144, 112, 8) 1px;
+}
+
+            /* Event */
+
+.event {
+    display: flex;
+    background-color: rgb(19, 18, 18);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    justify-content: center;
+}
+
+.party {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+
+.img_party {
+    background-image: url(../img/event-01.jpg);
+    width: 13rem;
+    height: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.img_party p {
+    background-color: rgb(19, 18, 18);
+    color: white;
+    padding: 20px;
+    margin: 4rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.party div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_party {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text_party h4 {
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.text_party p{
+    margin-bottom: 2rem;
+    font-family: 'poppins_regular';
+    margin-right: 1rem;
+    color: grey;
+}
+
+.text_party a {
+    font-family: 'poppins_regular';
+    color: black;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.dj {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-top: 2rem;
+}
+
+.img_dj {
+    background-image: url(../img/event-02.jpg);
+    width: 13rem;
+    height: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.img_dj p {
+    background-color: rgb(19, 18, 18);
+    color: white;
+    padding: 20px;
+    margin: 4rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.dj div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_dj {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text_dj h4 {
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.text_dj p{
+    margin-bottom: 2rem;
+    font-family: 'poppins_regular';
+    margin-right: 1rem;
+    color: grey;
+}
+
+.text_dj a {
+    font-family: 'poppins_regular';
+    color: black;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.night {
+    background-image: url(../img/event-03.jpg);
+    background-size: cover;
+    margin-left: 2rem;
+    display: flex;
+}
+
+.carre_night {
+    width: 30rem;
+    height: 24rem;
+    margin: 2rem;
+    background-color: white;
+    display: flex;
+    align-items: center; 
+    text-align: center;
+    flex-direction: column;
+}
+
+.carre_night p:first-child {
+    background-color: rgb(19, 18, 18);
+    color: white;
+    padding: 25px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.july {
+    display: block;
+}
+
+.text_night h4 {
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 4rem;
+}
+
+.johnnie {
+    display: block;
+}
+
+.text_night p {
+    font-family: 'poppins_regular';
+    color: grey;
+    margin-bottom: 2rem;
+}
+
+.text_night a {
+    font-family: 'poppins_regular';
+    color: black;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.text_night a:hover {
+    color: rgb(144, 112, 8);
+}
+
+.text_dj a:hover {
+    color: rgb(144, 112, 8);
+}
+
+.text_party a:hover {
+    color: rgb(144, 112, 8);
+}
+
+            /* Russell Stephens */
+
+.CEO {
+    background-color: rgb(19, 18, 18);
+    display: flex;
+    justify-content: center;
+}
+
+.texte_russell {
+    display: flex;
+    text-align: center;
+    width: 50rem;
+    background-color: white;
+    font-family: 'poppins_regular';
+    position: relative;    
+}
+
+.nom {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+
+.ceo {
+    font-family: 'poppins_regular';
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    color: rgb(144, 112, 8);
+}
+
+.texte_russell img {
+    position: absolute;
+    border-radius: 100px;
+    width: 6rem;
+    bottom: 8rem;
+    left: calc(50% - 3rem);
+}
+
+.texte_russell p {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.russell_stephens {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.bouton_switch {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.bouton_switch i:nth-child(2) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+            /* Localisation */
+
+.localisation iframe{
+    width: 100%;
+}
+
+            /* Footer */
+
+.footer_gauche {
+    width: 50%;
+    background-color: rgb(10, 10, 10);
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer_texte {   
+    width: 26em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 5rem;
+    margin-top: 3rem;
+}
+
+.footer_texte p {
+    color: rgb(80, 80, 80);
+    font-family: 'poppins_regular';
+    font-size: 15px;
+}
+
+.footer_droite {
+    width: 50%;
+    background-color: rgb(27, 26, 26);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: start;
+}
+
+.inscription h4 {
+    color: white;
+    font-family: 'poppins_regular';
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.inscription {
+    margin-bottom: 3rem;
+    margin-left: 9rem;
+}
+
+.inscription input {
+    background-color: rgb(27, 26, 26);
+    padding: 10px;
+    padding-right: 100px;
+    border-left: solid rgb(65, 50, 3) 1px;
+    border-top: solid rgb(65, 50, 3) 1px;
+    border-bottom: solid rgb(65, 50, 3) 1px;
+    border-right: none;
+
+
+
+}
+
+.inscription button {    
+    background-color: rgb(27, 26, 26);
+    border-right: solid rgb(65, 50, 3) 1px;
+    border-top: solid rgb(65, 50, 3) 1px;
+    border-bottom: solid rgb(65, 50, 3) 1px;
+    border-left: solid rgb(27, 26, 26) 1px;
+    padding: 10px;
+    color: rgb(155, 117, 6);
+    position: absolute;
+}
+
+.email {
+    position: relative;
+}
+
+.reseaux_footer {
+    color: white;
+    font-family: 'poppins_regular';
+    margin-left: 9rem;
+}
+
+.reseaux_footer i{
+    margin-left: 2rem;
+    color: grey;
+}
+
+footer {
+    display: flex;
+}
+
+.reseaux_footer a i:hover {
+    color: rgb(155, 117, 6);
+
+}
+
+.inscription button:hover {
+    cursor: pointer;
+    color: white;
 }
 
 
 
+@media screen and (max-width: 1060px) {
+    .all_plats {
+        flex-direction: column;
+    }
+
+    .background {
+        background-image: none;
+        padding-bottom: 35rem;
+        background-color: rgb(19, 18, 18);
+
+    }
+    .plats {
+        border-top: none;
+    }
+
+    .liste1 {
+        flex-direction: column;
+    }
+
+    .event {
+        flex-direction: column;
+        background-color: rgb(19, 18, 18);
+    }
+
+    .party {
+        justify-content: center;        
+    }
+    
+    .dj {
+        justify-content: center;
+    }
+
+    .night {
+        margin-left: 0rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_gauche {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer_texte {
+        align-items: center;
+        margin-right: 0rem;
+    }
+
+    .footer_droite {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 4rem;
+    }
+
+    .footer_droite h4 {
+        margin-top: 3rem;
+    }
+
+    .inscription {
+        margin-left: 0rem;
+    }
+
+    .reseaux_footer {
+        margin-left: 0rem;
+    }
+}
+    
+@media screen and (max-width: 800px) {
+    .texte_russell {
+        width:auto
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .photo img {
+        width: 0%;
+        height: 0rem;
+        object-fit: none;
+    }
+
+    .chef {
+        width: 100%;
+    }
+
+    .reservation {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .time {
+        width: 100%;
+    }
+
+    .dashed {
+        width: 90%;
+        align-items: center;
+    }
+
+    .ligne {
+        width:auto
+    }
+
+    .dashed img {
+        margin-left: 0rem;
+
+    }
+
+    .formulaire {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formulaire input {
+        margin-bottom: 1rem;
+    }
+
+    .booking {
+        height: auto;
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .titre1 {
+        text-align: center;
+    }
+}
 
 
+@media screen and (max-width: 591px) {
+    .texte_russell img {
+        bottom: 10rem
+    }
+    .all_plats {
+        width: 100%;
+    }
+}
 
+@media screen and (max-width: 560px) {
+    .all_plats {
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 
+    .prix {
+        margin: 0rem;
+    }
 
+    .tout {
+        padding-bottom: 35rem;
+    }
 
+    .plat {
+        flex-direction: column;
+        text-align: center;
+        padding-right: 2rem;
+        padding-left: 0rem;
+        width: auto;
+    }
 
-
+    .plat img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 
